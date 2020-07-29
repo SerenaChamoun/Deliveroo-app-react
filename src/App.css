@@ -1,38 +1,276 @@
-.App {
-  text-align: center;
+body {
+  font-family: arial;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 70%;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* HEADER */
+
+.header > .container > img {
+  width: 163px;
+  height: 53px;
+  margin: 0 auto;
+}
+.header > .line {
+  border-top: 1px solid lightgray;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* BLOC RESTO TITLE */
+
+.restoTitle > div > img {
+  width: 351px;
+  height: 236px;
+  border-radius: 7px;
+}
+
+.restoTitle {
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.restoTitle > div > h2 {
+  font-size: 32px;
+  line-height: 26.7px;
+}
+
+.restoTitle > div > p {
+  font-size: 19px;
+  line-height: 28.8px;
+  color: #868a8a;
+  margin-top: 46px;
+  margin-right: 20px;
+}
+
+/* BLOC CATEGORIES & MEALS */
+
+.content {
+  width: 840px;
+  margin-left: 274px;
+}
+
+.greyBG {
+  background-color: #f3f5f5;
+  margin-top: 20px;
+  padding-top: 10px;
+
+  position: relative;
+}
+
+.content > .categorie > div > h2 {
+  color: #2e3333;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 20px;
+}
+
+.content > .categorie > div > .meals > .meal {
+  width: 404px;
+  height: 162px;
+  background-color: white;
+}
+
+.content > .categorie > div > .meals {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* flex: 1; */
+  flex-wrap: wrap;
+}
+
+.content > .categorie > div > .meals > .meal {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  /* padding-top: 18px;
+  padding-left: 18px;
+  padding-right: 18px; */
+  border-radius: 7px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.content > .categorie > div > .meals > .meal > .mealInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.content > .categorie > div > .meals > .meal > .mealInfo > h3 {
+  font-family: arial;
+  font-weight: normal;
+  color: #2e3333;
+  font-size: 18px;
+  line-height: 15.6px;
+}
+
+.content > .categorie > div > .meals > .meal > .mealInfo > .description {
+  font-size: 14px;
+  line-height: 20.8px;
+  color: #808484;
+}
+
+.content > .categorie > div > .meals > .meal > .mealInfo > .price {
+  font-size: 17px;
+  line-height: 14.7px;
+  color: #808484;
+}
+
+.content > .categorie > div > .meals > .meal > .mealImage > img {
+  width: 131px;
+  height: 131px;
+  /* ajouter la propriete pour enlever le flou */
+  object-fit: cover;
+
+  padding-right: 18px;
+  padding-top: 18px;
+
+  border-radius: 7px;
+}
+
+/* A FAIRE le popular */
+/* .content > .categorie > div > .meals > .meal > .mealInfo >span{
+
+} */
+
+/* EMPTY CART  */
+
+.content > .emptycart {
+  position: absolute;
+  top: 40px;
+  right: 280px;
+  width: 351px;
+  height: 185px;
+  background-color: white;
+  border-radius: 7px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+
+  color: #8e9292;
+}
+
+.content > .emptycart > div:first-child {
+  width: 331px;
+  margin: 0 auto;
+  height: 50px;
+  background-color: #bac3c3;
+  margin-top: 14px;
+  border-radius: 7px;
+}
+
+.content > .emptycart > div:first-child > div {
+  text-align: center;
+  padding-top: 15px;
+  font-weight: bold;
+}
+
+.content > .emptycart > div:nth-child(2) {
+  padding-bottom: 15px;
+}
+
+/* CART TO FILL  */
+
+.content > .cartToFill {
+  position: absolute;
+  top: 40px;
+  right: 280px;
+  width: 351px;
+  background-color: white;
+  color: #8e9292;
+}
+
+.content > .cartToFill > div:first-child {
+  width: 90%;
+  margin: 0 auto;
+  height: 50px;
+  margin-top: 14px;
+  border-radius: 7px;
+  background-color: #31d0be;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.content > .cartToFill > div:first-child > div {
+  text-align: center;
+  /* not sure abt it (find another way to center horizontally */
+  padding-top: 15px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content > .cartToFill > .order {
+  width: 90%;
+  padding: 25px;
+}
+
+.content > .cartToFill > .order > .menu {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.content > .cartToFill > .order > .menu > .col-1 {
+  display: flex;
+  flex: 1;
+}
+
+.content > .cartToFill > .order > .menu > .col-1 > div {
+  margin: 0 5px;
+  color: #8e9292;
+}
+
+.content > .cartToFill > .order > .menu > .col-2 {
+  flex: 3;
+  margin-left: 10px;
+  color: black;
+}
+.content > .cartToFill > .order > .menu > .col-3 {
+  flex: 1;
+  color: black;
+  margin-left: 35px;
+}
+
+.content > .cartToFill > .sousTotal > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: black;
+  margin-top: 20px;
+  margin-left: 25px;
+}
+
+.content > .cartToFill > .sousTotal > div > div:nth-child(2) {
+  margin-right: 30px;
+}
+
+.content > .cartToFill > .total {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 25px;
+}
+
+.content > .cartToFill > .total > div:nth-child(2) {
+  margin-right: 30px;
+}
+
+.content > .cartToFill > .line {
+  border-top: #8e9292 solid 2px;
+  width: 90%;
+  margin: 0 auto;
 }
