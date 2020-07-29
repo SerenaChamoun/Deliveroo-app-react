@@ -18,7 +18,7 @@ const CartToFill = ({ cart, setCart }) => {
       <div className="sousTotal">
         <div>
           <div>Sous-total</div>
-          <div>{subTotal} €</div>
+          <div>subTotal.toFixed(2) €</div>
         </div>
         <div>
           <div>Frais de livraison</div>
@@ -28,7 +28,7 @@ const CartToFill = ({ cart, setCart }) => {
       <div className="line"></div>
       <div className="total">
         <div>Total</div>
-        <div>{total} €</div>
+        <div>total.toFixed(2) €</div>
       </div>
     </div>
   );
